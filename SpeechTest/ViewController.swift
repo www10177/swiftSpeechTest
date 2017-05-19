@@ -8,12 +8,14 @@
 
 import UIKit
 import Speech
+import AVFoundation
 
 class ViewController: UIViewController,SFSpeechRecognizerDelegate {
     
     @IBOutlet weak var recogResult: UITextView!
     @IBOutlet weak var startBtn: UIButton!
     
+    //for speech api
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
@@ -94,6 +96,10 @@ class ViewController: UIViewController,SFSpeechRecognizerDelegate {
         }
     }
     
+    //for AVFoundation
+    let synth = AVSpeechSynthesizer()
+    var myUtterance = AVSpeechUtterance(string: "")
+    
     
     
     override func viewDidLoad() {
@@ -146,6 +152,11 @@ class ViewController: UIViewController,SFSpeechRecognizerDelegate {
         }
     }
 
+    @IBAction func TTSBtnTapped(_ sender: AnyObject) {
+        myUtterance = AVSpeechUtterance(string: recogResult.text)
+        myUtterance.rate = 0.5
+        synth.speak(myUtterance)
+    }
 
 }
 

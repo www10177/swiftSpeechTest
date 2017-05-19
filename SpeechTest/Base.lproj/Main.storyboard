@@ -25,7 +25,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Here will show recognization result" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Eut-0a-2Rr">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="這裡會顯示辨識結果 TEST" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Eut-0a-2Rr">
                                 <frame key="frameInset" minX="27" minY="164" width="320" height="277"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,6 +38,14 @@
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NRE-9a-Tar"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8np-Gs-HPz">
+                                <frame key="frameInset" minX="84" minY="579" width="207" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Text To Speech"/>
+                                <connections>
+                                    <action selector="TTSBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n7D-WV-1Na"/>
                                 </connections>
                             </button>
                         </subviews>
