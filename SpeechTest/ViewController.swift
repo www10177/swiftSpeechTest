@@ -16,7 +16,7 @@ class ViewController: UIViewController,SFSpeechRecognizerDelegate {
     @IBOutlet weak var startBtn: UIButton!
     
     //for speech api
-    private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
+    private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "zh"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
